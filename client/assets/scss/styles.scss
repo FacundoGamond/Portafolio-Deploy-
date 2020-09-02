@@ -1,0 +1,1175 @@
+//General styles
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "titilium", Arial, sans-serif;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#loading {
+    margin-top: 40px;
+
+    img {
+        display: block;
+        margin: 0px auto;
+        width: 10%;
+    }
+
+    width: 100%;
+}
+
+.required-form {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 36%;
+    background-color: #444;
+    color: white;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 0px 5px 5px 0px;
+    top: -60px;
+    right: -54%;
+}
+
+.required-form-big {
+    display: block;
+    position: relative;
+    height: 120px;
+    width: 16%;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    border-radius: 0px 5px 5px 0px;
+    top: -140px;
+    right: -78%;
+    padding-top: 46px;
+}
+
+//Variables
+$bluecolor: rgba(28, 106, 179, 0.637);
+
+//Fonts
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/font\ frames.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "web-icons";
+    src: url("../fonts/WebSymbols-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "yanone";
+    src: url('../fonts/yanone.ttf');
+}
+
+@font-face {
+    font-family: "titilium";
+    src: url('../fonts/titilium.ttf');
+}
+
+@font-face {
+    font-family: "finger";
+    src: url('../fonts/finger.ttf');
+}
+
+
+//Styles
+ion-content {
+    background-color: #eee;
+
+    #header {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background-color: $bluecolor;
+        height: 70px;
+        z-index: 100;
+
+        #fijo {
+            display: none;
+            opacity: 0;
+            height: 90px;
+
+        }
+
+        ul {
+            display: block;
+            margin: 0px auto;
+            width: 80%;
+
+            li {
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                margin: 0px auto;
+
+                span {
+                    display: block;
+                    color: white;
+                    line-height: 70px;
+                    cursor: pointer;
+                    transition: 300ms all;
+                    font-weight: bold;
+                }
+
+                span:hover {
+                    transform: scale(1.15);
+                    color: #444;
+                }
+
+                #logo-animado {
+                    color: white;
+                    cursor: auto;
+                }
+
+                #logo-animado {
+                    display: block;
+                    position: fixed;
+                    top: 2px;
+                    width: 15%;
+                    line-height: 0px;
+                    font-family: "icons";
+                    font-size: 60px;
+                    animation-name: rotacion;
+                    /*Elijo el keyframe*/
+                    animation-duration: 10s;
+                    /*Elijo la duracion*/
+                    animation-iteration-count: infinite;
+                    /*Elijo si quiero que sea finita o infinita*/
+                    animation-timing-function: linear;
+                    /*Cambiamos como se mueve (la curva de movimiento)*/
+                }
+
+                @keyframes rotacion {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+    }
+
+    #center {
+        display: block;
+        width: 80%;
+        margin: 0px auto;
+        padding-top: 70px;
+        min-height: 1000px;
+
+        .total {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+            color: #444;
+
+            .content-login,
+            .content-projects,
+            .content-project,
+            .content-contact,
+            .content-about,
+            .content-home {
+                display: block;
+                width: 90%;
+                margin: 0px auto;
+                padding: 20px;
+                transition: all 300s;
+
+                //background: white;
+                h2,
+                h1 {
+                    font-family: "titilium";
+                    display: block;
+                    margin: 0px auto;
+                    text-align: center;
+                    font-size: 50px;
+                    letter-spacing: 1px;
+                    width: 100%;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #ccc;
+                    margin-bottom: 20px;
+
+                }
+
+                p {
+                    display: block;
+                    font-size: 20px;
+                    text-align: justify;
+                    width: 80%;
+                    margin: 0px auto;
+                }
+            }
+
+            .content-login {
+                display: block;
+                width: 100%;
+
+                #user-options {
+                    width: 25%;
+                    margin: 0px auto;
+
+                    #logout {
+                        margin-right: 10%;
+                    }
+                }
+
+                #projects-manager {
+                    width: 80%;
+                    margin: 0px auto;
+                    margin-top: 50px;
+                    border: 1px solid #ccc;
+                    background-color: white;
+                    box-shadow: 0px 0px 10px #444;
+                    min-height: 400px;
+
+                    h3 {
+                        display: block;
+                        width: 80%;
+                        margin: 0px auto;
+                        text-align: center;
+                        font-size: 30px;
+                        border-bottom: 1px solid #ccc;
+                        padding-top: 30px;
+                        margin-bottom: 50px;
+                    }
+
+                    article {
+                        display: block;
+                        width: 90%;
+                        margin: 0px auto;
+                        padding-bottom: 30px;
+                        border-bottom: 1px dashed #ccc;
+                        margin-bottom: 30px;
+
+                        img {
+                            display: block;
+                            float: left;
+                            width: 150px;
+                            border: 2px solid $bluecolor;
+                            border-radius: 10px;
+                            margin-right: 2%;
+                        }
+
+                        #data {
+                            display: block;
+                            float: left;
+                            width: 25%;
+                            padding-top: 10px;
+                            font-size: 20px;
+                            margin-right: 2%;
+                        }
+
+                        #description {
+                            display: block;
+                            float: left;
+                            padding-top: 10px;
+                            font-size: 20px;
+                            width: 35%;
+                            height: 140px;
+                            overflow: scroll;
+                            overflow-x: hidden;
+
+
+                        }
+
+                        #project-actions {
+                            display: block;
+                            float: right;
+                            padding-top: 10px;
+
+                            button {
+                                width: 100px;
+                                margin-bottom: 20px;
+                            }
+
+                            #delete {
+                                background-color: red;
+                            }
+
+                            #edit {
+                                background-color: rgb(143, 143, 0);
+                            }
+                        }
+                    }
+                }
+
+                #logout {
+                    background-color: rgb(212, 57, 0);
+                }
+
+                #create {
+                    background-color: rgb(41, 131, 0);
+                }
+
+                input[type="submit"],
+                button {
+                    width: 40%;
+                    height: 50px;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                    color: white;
+                    transition: 300ms all;
+                }
+
+                input[type="submit"]:hover,
+                button:hover {
+                    background-color: #444 !important;
+                    transform: scale(1.1);
+                }
+
+                #error-login {
+                    display: block;
+                    position: relative;
+                    top: -218px;
+                    color: red;
+                    right: -46%;
+                }
+
+                #login-form {
+                    width: 50%;
+                    margin: 0px auto;
+
+                    div {
+                        margin-bottom: 15px;
+
+                        label {
+                            font-size: 20px;
+                        }
+
+                        input[type="text"],
+                        input[type="password"] {
+                            width: 100%;
+                            height: 40px;
+                            font-size: 15px;
+                        }
+
+                        input[type="text"]:focus,
+                        input[type="password"]:focus {
+                            border: 2px solid $bluecolor;
+                            border-radius: 5px;
+                        }
+
+                    }
+
+                    input[type="submit"] {
+                        display: block;
+                        background-color: $bluecolor;
+                        margin: 0px auto;
+                        margin-top: 25px;
+                    }
+
+                }
+            }
+
+            .content-home {
+                #home-float {
+                    display: block;
+                    width: 80%;
+                    margin: 0px auto;
+
+                    h3 {
+                        border-bottom: 1px solid #ccc;
+                        text-align: center;
+                        font-size: 30px;
+                        padding-bottom: 5px;
+                        letter-spacing: 1px;
+                    }
+
+                    #tech {
+                        display: block;
+                        float: left;
+                        width: 40%;
+                        margin-left: 5%;
+                    }
+
+                    #soft {
+                        display: block;
+                        float: right;
+                        width: 40%;
+                        margin-right: 5%;
+                    }
+
+                    p {
+                        display: block;
+                        height: 50px;
+                    }
+
+                    ion-icon {
+                        font-size: 30px;
+                    }
+
+                    img {
+                        width: 42px;
+                    }
+                }
+            }
+
+            .content-about {
+                #info {
+                    display: block;
+                    width: 90%;
+                    margin: 0px auto;
+                    margin-top: 50px;
+
+                    #foto {
+                        display: block;
+                        float: left;
+                        width: 25%;
+
+                        img {
+                            width: 250px;
+                            border: 2px solid $bluecolor;
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 5px #444;
+                        }
+                    }
+
+                    #data-about {
+                        display: block;
+                        float: right;
+                        width: 75%;
+
+                        p {
+                            padding-left: 5%;
+                            display: block;
+                            width: 100%;
+                            text-align: justify;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .content-projects {
+                #projects {
+                    width: 95%;
+                    padding-left: 3%;
+                    margin: 0px auto;
+                    margin-top: 30px;
+                    margin-bottom: 100px;
+
+                    .project {
+                        display: block;
+                        float: left;
+                        border: 1px solid #ccc;
+                        width: 250px;
+                        height: 250px;
+                        transition: 300ms all;
+                        margin-right: 3%;
+                        margin-bottom: 40px;
+                        box-shadow: 0px 0px 10px #ccc;
+                        border-radius: 5px;
+                        background-color: white;
+                        cursor: pointer;
+
+                        img {
+                            display: block;
+                            margin: 0px auto;
+                            width: 250px;
+                            height: 250px;
+                            border-radius: 5px;
+                        }
+
+                        #title {
+                            display: block;
+                            position: relative;
+                            font-family: "titilium";
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            padding-top: 90px;
+                            height: 250px;
+                            font-size: 40px;
+                            top: -277px;
+                            right: 0px;
+                            color: white;
+                            transition: 300ms all;
+                            text-align: center;
+                            opacity: 0;
+                            border-radius: 5px;
+
+                            span {
+                                display: block;
+                                margin: 0px auto;
+                                width: 200px;
+                                line-height: 40px;
+                            }
+
+                            p {
+                                display: block;
+                                position: relative;
+                                border-top: 1px solid white;
+                                font-size: 14px;
+                                text-align: center;
+                                width: 150px;
+                                margin: 0px auto;
+                                top: 7px;
+
+                            }
+                        }
+                    }
+
+                    .project:hover {
+
+                        transform: scale(1.05);
+
+                        #title {
+                            opacity: 1;
+                            background-color: rgba($color: #444, $alpha: 0.8);
+                        }
+                    }
+                }
+            }
+
+            .content-project {
+                #single-project {
+                    margin-top: 40px;
+                    padding-bottom: 40px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px dashed #ccc;
+
+                    #project-info {
+                        display: block;
+                        float: left;
+                        width: 40%;
+
+                        img {
+                            border-radius: 5px 5px 0px 0px;
+                            border: 2px solid $bluecolor;
+                            width: 100%;
+                            border-bottom: none;
+                            box-shadow: 0px 0px 5px $bluecolor;
+                        }
+
+                        span {
+                            display: block;
+                            width: 100%;
+                            height: 50px;
+                            margin-top: -4px;
+                            border: 2px solid $bluecolor;
+                            border-top: none;
+                            border-radius: 0px 0px 5px 5px;
+                            text-align: center;
+                            line-height: 46px;
+                            background-color: $bluecolor;
+                            color: white;
+                            box-shadow: 0px 0px 5px $bluecolor;
+                        }
+                    }
+
+                    #project-description {
+                        display: block;
+                        float: left;
+                        width: 52%;
+                        min-height: 500px;
+                        margin-top: 0px !important;
+                        margin-left: 5%;
+                        text-align: justify;
+                        border: 2px solid #ccc;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 5px #ccc;
+                        overflow: hidden;
+                        background-color: white;
+
+                        span {
+                            #title-description {
+                                display: block;
+                                width: 100%;
+                                margin: 0px auto;
+                                margin-top: 10px;
+                                padding-left: 13px;
+                                padding-bottom: 5px;
+                                margin-bottom: 20px;
+                                font-size: 40px;
+                                text-align: left;
+                                border-bottom: 1px dashed #ccc;
+                            }
+
+                            #description-text {
+                                display: block;
+                                width: 95%;
+                                margin: 0px auto;
+                                text-align: justify;
+                            }
+                        }
+
+                        #langs {
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            background-color: #ccc;
+                            color: white;
+                            font-size: 20px;
+                            height: 70px;
+                            line-height: 70px;
+                            text-align: center;
+                            transform: rotate(45deg);
+                            opacity: 0.7;
+                            right: -230px;
+                            top: -53px;
+                        }
+                    }
+                }
+
+                #buttons {
+                    width: 100%;
+                    margin: 0px auto;
+                    margin-bottom: 70px;
+
+                    ul {
+                        display: block;
+                        margin: 0px auto;
+                        width: 50%;
+
+                        li {
+                            display: inline-block;
+                            width: 45%;
+                            margin-right: 5%;
+
+                            #edit {
+                                background-color: $bluecolor;
+                            }
+                        }
+                    }
+
+                    button {
+                        padding: 10px;
+                        width: 100%;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: pointer;
+                        background-color: rgb(204, 82, 0);
+                        transition: 300ms all;
+
+
+                    }
+
+                    button:hover {
+                        transform: scale(1.1);
+                        background-color: #444 !important;
+                    }
+                }
+
+            }
+
+            .content-edit,
+            .content-create {
+                #create-project {
+                    display: block;
+                    width: 100%;
+                    margin: 0px auto;
+                    margin-top: 40px;
+                    margin-bottom: 70px;
+                    padding-left: 1.5%;
+
+                    div {
+                        margin-top: 20px;
+                        width: 50%;
+                        height: 100px;
+                        float: left;
+
+                        input[type="text"],
+                        input[type="number"] {
+                            width: 90%;
+                            height: 40px;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            transition: 300ms all;
+                            padding-left: 5px;
+                        }
+
+                        label {
+                            font-size: 25px;
+                        }
+                    }
+
+                    .form-big {
+                        clear: both;
+                        float: none;
+                        display: block;
+                        width: 100%;
+                        height: 170px;
+                        margin: 0px auto;
+
+                        textarea {
+                            width: 93.7%;
+                            min-height: 120px;
+                            resize: none;
+                            margin-top: -10px;
+                            margin-bottom: 20px;
+                            border-radius: 5px;
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            transition: 300ms all;
+                        }
+
+                        input[type="file"],
+                        label {
+                            display: block;
+                            margin: 0px auto;
+                            text-align: center;
+                        }
+
+                        input[type="file"] {
+                            margin-top: -10px;
+                        }
+
+                    }
+
+                    input[type="submit"] {
+                        display: block;
+                        margin: 0px auto;
+                        margin-top: -30px;
+                        height: 40px;
+                        line-height: 30px;
+                        width: 30%;
+                        background-color: $bluecolor;
+                        color: white;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: 300ms all;
+                    }
+
+                    input[type="submit"]:hover {
+                        background-color: #444;
+                        transform: scale(1.2);
+                    }
+
+                    input[disabled] {
+                        background-color: #ccc;
+                    }
+
+                    input[disabled]:hover {
+                        background-color: #ccc !important;
+                        transform: scale(1.0) !important;
+                    }
+
+                    input[type="text"]:focus,
+                    textarea:focus,
+                    input[type="number"]:focus {
+                        border: 1px solid $bluecolor !important;
+                        border-radius: 5px !important;
+
+                    }
+                }
+            }
+
+            .content-edit {
+                img {
+                    display: block;
+                    margin: 0px auto;
+                    width: 250px;
+                    margin-bottom: 50px;
+                    margin-top: -70px;
+                    border: 2px solid $bluecolor;
+                    border-radius: 10px;
+                }
+            }
+
+
+            .content-contact {
+                #contact {
+                    width: 100%;
+
+                    #contact-form {
+                        display: block;
+                        width: 100%;
+                        margin: 0px auto;
+                        margin-top: 40px;
+                        margin-bottom: 70px;
+                        padding-left: 1.5%;
+
+
+
+                        div {
+                            margin-top: 20px;
+                            width: 50%;
+                            height: 100px;
+                            float: left;
+
+                            input[type="text"],
+                            input[type="number"] {
+                                font-size: 15px;
+                                width: 90%;
+                                height: 40px;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                                transition: 300ms all;
+                                padding-left: 5px;
+                            }
+
+                            label {
+                                font-size: 25px;
+                            }
+                        }
+
+                        .form-big {
+                            clear: both;
+                            float: none;
+                            display: block;
+                            width: 100%;
+                            height: 170px;
+                            margin: 0px auto;
+
+                            textarea {
+                                font-size: 15px;
+                                width: 93.7%;
+                                min-height: 120px;
+                                resize: none;
+                                margin-top: -10px;
+                                margin-bottom: 20px;
+                                border-radius: 5px;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                transition: 300ms all;
+                            }
+
+                            input[type="file"],
+                            label {
+                                display: block;
+                                margin: 0px auto;
+                                text-align: center;
+                            }
+
+                            input[type="file"] {
+                                margin-top: -10px;
+                            }
+
+                        }
+
+                        input[type="submit"] {
+                            display: block;
+                            margin: 0px auto;
+                            margin-top: -30px;
+                            height: 40px;
+                            line-height: 30px;
+                            width: 30%;
+                            background-color: $bluecolor;
+                            color: white;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: 300ms all;
+                        }
+
+                        input[type="submit"]:hover {
+                            background-color: #444;
+                            transform: scale(1.2);
+                        }
+
+                        input[disabled] {
+                            background-color: #ccc;
+                        }
+
+                        input[disabled]:hover {
+                            background-color: #ccc !important;
+                            transform: scale(1.0) !important;
+                        }
+
+                        input[type="text"]:focus,
+                        textarea:focus,
+                        input[type="number"]:focus {
+                            border: 1px solid $bluecolor !important;
+                            border-radius: 5px !important;
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    #footer {
+        display: block;
+        height: 70px;
+        line-height: 70px;
+        color: white;
+        text-align: center;
+        background-color: #444;
+        margin-top: 50px;
+    }
+
+}
+
+//Responsive
+
+@media (max-width: 742px) {
+    #header {
+        background-color: transparent !important;
+
+        #fijo {
+            display: block !important;
+            opacity: 1 !important;
+            background-color: $bluecolor;
+
+            #menu-title {
+                display: block;
+                float: left;
+                color: white;
+                width: 70%;
+                text-align: left;
+                padding-left: 5%;
+                font-size: 45px;
+                font-weight: bold;
+                line-height: 93px;
+                height: 100%;
+            }
+
+            #menu-toggle {
+                display: block;
+                height: 70px;
+                color: white;
+                font-size: 70px;
+                height: 100%;
+                line-height: 110px;
+                float: right;
+                cursor: pointer;
+                text-align: center;
+                margin-right: 2.5%;
+
+                ion-icon {
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    padding: -10px;
+
+                }
+            }
+        }
+
+        #menu {
+            height: 0px;
+            background-color: $bluecolor;
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                width: 100%;
+
+                li {
+                    display: block;
+                    width: 100%;
+                    border-top: 1px solid #ccc;
+
+                    span {
+                        padding-left: 10px !important;
+                        text-align: left;
+
+                    }
+
+                    span:hover {
+                        transform: scale(1);
+                        transform: translateX(20px);
+                        color: #444;
+                    }
+                }
+
+                #logo {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    #center {
+        width: 90% !important;
+        padding-top: 100px !important;
+    }
+
+    .content-about {
+        #info {
+            display: block;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 30px !important;
+
+            #foto {
+                display: block;
+                float: none !important;
+                clear: both !important;
+                width: 50% !important;
+                margin: 0px auto;
+                margin-bottom: 30px;
+
+                img {
+                    width: 250px !important;
+
+                }
+            }
+
+            #data-about {
+                display: block;
+                float: right;
+                clear: both;
+                width: 100% !important;
+
+                p {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    .content-projects {
+        width: 100% !important;
+    }
+
+    .content-project {
+        #single-project {
+            #project-info {
+                display: block;
+                float: none !important;
+                width: 80% !important;
+                margin: 0px auto;
+                margin-bottom: 40px;
+
+            }
+
+            #project-description {
+                display: block;
+                float: none !important;
+                width: 80% !important;
+                margin: 0px auto !important;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 654px) {
+
+    .content-project #single-project #project-info {
+        width: 100% !important;
+    }
+
+    .content-project #single-project #project-description {
+        width: 100% !important;
+    }
+
+    #center {
+        width: 100% !important;
+    }
+
+    p {
+        width: 95% !important;
+    }
+
+    .total {
+        width: 100% !important;
+    }
+
+    #title-description {
+        font-size: 25px !important;
+    }
+
+    #description-text {
+        font-size: 15px !important;
+        padding-left: 1%;
+    }
+
+    .content-login,
+    .content-projects,
+    .content-project,
+    .content-contact,
+    .content-about,
+    .content-home {
+
+        width: 100% !important;
+    }
+
+    .content-home {
+        p {
+            display: block;
+            font-size: 15px !important;
+        }
+
+        #home-float {
+
+            #tech,
+            #soft {
+                float: none !important;
+                width: 100% !important;
+
+                h3 {
+                    font-size: 20px !important;
+                }
+
+                ion-icon {
+                    font-size: 20px !important;
+                }
+
+                img {
+                    width: 22px !important;
+                }
+            }
+        }
+    }
+
+    .content-contact {
+        #contact {
+            width: 100%;
+
+            #contact-form {
+
+                div {
+                    width: 100% !important;
+                    float: none !important;
+
+
+
+                    label {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .required-form-big {
+        width: 36% !important;
+        right: -58% !important;
+        padding-top: 32px !important;
+    }
+
+
+    .content-home {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 378px) {
+    #title {
+        font-size: 30px !important;
+    }
+
+    .total {
+        h2 {
+            font-size: 30px !important;
+        }
+    }
+}
