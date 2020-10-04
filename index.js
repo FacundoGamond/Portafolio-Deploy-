@@ -6,7 +6,9 @@ var app = require('./app'); //Configuracion de express
 var port = 3200;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/portafolio')
+mongoose.set('useFindAndModify', false);
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/portafolio',{ useNewUrlParser:true, useUnifiedTopology: true })
     .then(() => {
         console.log("Conexion a base de datos realizada!");
 

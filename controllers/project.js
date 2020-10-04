@@ -5,18 +5,6 @@ var path = require('path');
 const nodemailer = require("nodemailer");
 
 var controller = {
-    home: function (req, res) {
-        return res.status(200).send({
-            message: "Soy la home"
-        });
-    },
-
-    test: function (req, res) {
-        return res.status(200).send({
-            message: "Soy el metodo o accion test del controlador"
-        });
-    },
-
     saveProject: function (req, res) {
         //Creo una variable de tipo project, el modelo que hicimos anteriormente
         var project = new Project();
@@ -31,6 +19,7 @@ var controller = {
         project.year = params.year;
         project.lang = params.lang;
         project.image = null;
+        project.url = params.url;
 
         //Guardar en base de datos
         project.save((err, projectStored) => {

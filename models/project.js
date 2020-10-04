@@ -10,7 +10,8 @@ var ProyectSchema=Schema({
     category: String,
     year: Number,
     lang: String,
-    image: String
+    image: String,
+    url: String
 });
 
 module.exports=mongoose.model('Project', ProyectSchema); //el primer parametro es la coleccion donde se va a guardar (tiene que ir en singular, despues se pasa a plural solo)

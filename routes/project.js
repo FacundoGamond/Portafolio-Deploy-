@@ -10,8 +10,6 @@ var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({ uploadDir: './uploads' });
 
 //Rutas a metodos del controlador
-router.get('/home', ProjectController.home);//Ruta de prubea
-router.post('/test', ProjectController.test);//Ruta de prueba
 router.post('/save-project', ProjectController.saveProject); //Para guardar proyectos
 router.get('/project/:id?', ProjectController.getProject); //Para recibir un proyecto
 router.get('/projects', ProjectController.getProjects); //Para recibir todos los proyectos
