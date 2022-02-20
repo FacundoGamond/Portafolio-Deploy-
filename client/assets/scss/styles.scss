@@ -172,7 +172,7 @@ ion-content {
                     line-height: 0px;
                     font-family: "icons";
                     font-size: 60px;
-                    animation-name: rotacion;
+                    /*animation-name: rotacion;
                     /*Elijo el keyframe*/
                     animation-duration: 10s;
                     /*Elijo la duracion*/
@@ -427,6 +427,10 @@ ion-content {
                         float: left;
                         width: 40%;
                         margin-left: 5%;
+
+                        img{
+                            max-width: 30px;
+                        }
                     }
 
                     #soft {
